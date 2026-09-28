@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ميني كيك ميم | Mini Cake Meem</title>
+<meta name="description" content="ميني كيك، بينتو كيك وكب كيك حسب مناسبتك — مسقط">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23A63D55'/><text x='50' y='68' font-size='56' text-anchor='middle' fill='white' font-family='sans-serif'>م</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FBF6F1;--ink:#3A2A24;--muted:#5E4A42;--line:#EADBD0;--blush:#F3E2DC;--sand:#EFE6D8;--accent:#A63D55;--accent-dk:#83293F;--display:'Reem Kufi',Tahoma,sans-serif;--body:'IBM Plex Sans Arabic',Tahoma,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.6}
+a{color:var(--accent);text-decoration:none}a:hover{color:var(--accent-dk)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+img,svg{max-width:100%}
+.wrap{max-width:1248px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.2}
+h2{font-size:clamp(32px,4vw,48px)}
+section{padding:clamp(48px,7vw,88px) 0}
+.white{background:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 26px;border-radius:999px;font:600 16px var(--body);border:1.5px solid transparent;cursor:pointer}
+.btn-accent{background:var(--accent);color:#fff}.btn-accent:hover{background:var(--accent-dk);color:#fff}
+.btn-dark{background:var(--ink);color:#fff}.btn-dark:hover{color:#fff;background:#24180F}
+.btn-ghost{border-color:var(--ink);color:var(--ink);background:transparent}
+/* header */
+header{position:sticky;top:0;z-index:10;background:rgba(251,246,241,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:76px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;color:var(--ink);font:700 22px var(--display)}
+.logo b{width:44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:24px}
+nav{display:flex;gap:32px}nav a{color:var(--ink);font-weight:500}
+.cart-btn{position:relative}
+.badge{min-width:24px;height:24px;padding:0 6px;border-radius:12px;background:var(--accent);color:#fff;font-size:13px;display:inline-grid;place-items:center}
+/* hero */
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.pill{display:inline-block;padding:8px 18px;border-radius:20px;background:var(--blush);color:var(--accent-dk);font-weight:600;font-size:15px}
+.hero h1{font-size:clamp(44px,6vw,76px);margin:24px 0}
+.hero p{font-size:clamp(17px,1.6vw,20px);color:var(--muted);max-width:540px;margin:0 0 28px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.facts{display:flex;gap:40px;margin-top:36px;flex-wrap:wrap}
+.facts strong{display:block;font:700 28px var(--display)}.facts span{font-size:14px;color:var(--muted)}
+.art{position:relative;aspect-ratio:560/520;border-radius:50% 50% 32px 32px/46% 46% 32px 32px;background:#F1DFD6;display:flex;align-items:flex-end;justify-content:center}
+.art svg{width:80%}
+.float{position:absolute;padding:14px 20px;border-radius:18px;font-weight:600}
+.f1{bottom:32px;right:-16px;background:#fff;box-shadow:0 12px 32px rgba(58,42,36,.12)}
+.f1 small{display:block;color:var(--muted);font-weight:400}.f1 strong{font:700 22px var(--display)}
+.f2{top:48px;left:-12px;background:var(--ink);color:var(--bg);font-size:15px}
+.cake-pop{animation:pop .9s cubic-bezier(.2,.9,.3,1.3) both}
+@keyframes pop{from{transform:translateY(30px) scale(.9);opacity:0}}
+@media (prefers-reduced-motion:reduce){.cake-pop{animation:none}html{scroll-behavior:auto}}
+/* menu */
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:28px}
+.head p{margin:8px 0 0;color:var(--muted);font-size:18px}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px}
+.tab{min-height:44px;padding:0 20px;border-radius:22px;border:1.5px solid var(--line);background:#fff;color:var(--ink);font:500 16px var(--body);cursor:pointer}
+.tab[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.card{display:flex;flex-direction:column;gap:12px}
+.pic{position:relative;aspect-ratio:1/1.05;border-radius:24px;background:var(--bg);display:flex;align-items:flex-end;justify-content:center}
+.pic svg{width:82%}
+.tag{position:absolute;top:14px;right:14px;padding:5px 12px;border-radius:14px;background:var(--ink);color:#fff;font-size:13px;font-weight:600}
+.card h3{font:600 19px var(--body)}.card p{margin:0;color:var(--muted);font-size:15px}
+.row{display:flex;justify-content:space-between;align-items:center;margin-top:auto}
+.price{font:700 21px var(--display)}
+.add{min-height:44px;padding:0 18px;border-radius:22px;border:none;background:var(--blush);color:var(--accent-dk);font:600 15px var(--body);cursor:pointer}
+.add.in{background:var(--accent);color:#fff}
+/* blocks */
+.occ{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:36px}
+.occ div{padding:30px;border-radius:24px}.occ strong{display:block;font:500 26px var(--display);margin-bottom:8px}.occ span{color:var(--muted)}
+.occ .d{background:var(--ink);color:var(--bg)}.occ .d span{color:#E6D6CC}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-top:40px;counter-reset:s}
+.steps div{counter-increment:s}.steps div::before{content:counter(s,arabic-indic);display:block;font:500 52px var(--display);color:var(--accent)}
+.steps strong{display:block;font-size:21px;margin:6px 0}.steps span{color:var(--muted);font-size:17px}
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px}
+figure{margin:0;padding:30px;border-radius:24px;background:#fff;border:1px solid var(--line)}
+.stars{color:#B7791F;letter-spacing:4px}blockquote{margin:14px 0;font-size:18px;line-height:1.8}figcaption{color:var(--muted);font-size:15px}
+.gallery{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.gallery div{aspect-ratio:1;border-radius:18px;display:flex;align-items:flex-end;justify-content:center}.gallery svg{width:78%}
+footer{background:var(--ink);color:var(--bg);padding:64px 0 calc(40px + env(safe-area-inset-bottom,0px))}
+.fr{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+footer .big{font:700 clamp(30px,3.5vw,40px) var(--display)}footer p{color:#E6D6CC;margin:8px 0 0}
+.meta{border-top:1px solid var(--muted);margin-top:36px;padding-top:24px;color:#E6D6CC;font-size:15px}
+.meta a{color:var(--bg)}
+/* cart drawer */
+.drawer{position:fixed;inset:0;z-index:20;display:none}
+.drawer.open{display:block}
+.shade{position:absolute;inset:0;background:rgba(58,42,36,.4)}
+.panel{position:absolute;top:0;bottom:0;left:0;width:min(420px,100%);background:#fff;padding:24px;padding-top:calc(24px + env(safe-area-inset-top,0px));display:flex;flex-direction:column;gap:16px;animation:slide .25s ease-out}
+@keyframes slide{from{transform:translateX(-100%)}}
+.panel h3{font-size:28px}
+.lines{flex:1;overflow:auto;display:flex;flex-direction:column;gap:12px}
+.line{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}
+.qty{display:flex;align-items:center;gap:8px}
+.qty button{width:36px;height:36px;border-radius:18px;border:1px solid var(--line);background:#fff;font-size:18px;cursor:pointer}
+.empty{color:var(--muted)}
+.sum{display:flex;justify-content:space-between;font:700 22px var(--display)}
+.x{align-self:flex-start;width:44px;height:44px;border:none;background:var(--bg);border-radius:22px;font-size:22px;cursor:pointer}
+@media (max-width:960px){
+  nav{display:none}
+  .hero{grid-template-columns:1fr;gap:36px}.art{order:-1;max-width:480px;width:100%;margin:0 auto}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .occ,.reviews{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr;gap:24px}
+  .gallery{grid-template-columns:repeat(3,1fr)}
+  .f1{right:8px}.f2{left:8px}
+}
+@media (max-width:560px){
+  .bar .wa-label{display:none}
+  .occ,.reviews{grid-template-columns:1fr}
+  .card h3{font-size:16px}.card p{font-size:13px}.price{font-size:17px}
+  .row{flex-direction:column;align-items:stretch;gap:8px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top"><b>م</b>ميني كيك ميم</a>
+    <nav aria-label="القائمة الرئيسية">
+      <a href="#menu">المنيو</a><a href="#occasions">المناسبات</a><a href="#how">طريقة الطلب</a><a href="#reviews">آراء العملاء</a>
+    </nav>
+    <button class="btn btn-dark cart-btn" id="openCart" aria-label="فتح السلة">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.5 11h-11z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      <span class="wa-label">السلة</span><span class="badge" id="count">0</span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+<section>
+  <div class="wrap hero">
+    <div>
+      <span class="pill">مخبوز بحب في مسقط</span>
+      <h1>كيكة صغيرة…<br>وفرحة كبيرة</h1>
+      <p>ميني كيك مصمم حسب مناسبتك — عيد ميلاد، تخرج، مولود جديد أو هدية بسيطة تقول الكثير. كل كيكة تُخبز طازجة يوم الاستلام.</p>
+      <div class="cta"><a class="btn btn-accent" href="#menu">اطلب كيكتك</a><a class="btn btn-ghost" href="#how">كيف أطلب؟</a></div>
+      <div class="facts">
+        <div><strong>12+</strong><span>نكهة</span></div>
+        <div><strong>48 ساعة</strong><span>مدة التحضير</span></div>
+        <div><strong>توصيل</strong><span>داخل مسقط</span></div>
+      </div>
+    </div>
+    <div class="art">
+      <svg class="cake-pop" viewBox="0 0 200 200" role="img" aria-label="رسم كيكة فراولة بشمعة">
+        <ellipse cx="100" cy="172" rx="84" ry="12" fill="#E2C3B6"/>
+        <rect x="38" y="92" width="124" height="78" rx="14" fill="#F7D6D9"/>
+        <rect x="38" y="138" width="124" height="6" fill="#fff" opacity=".7"/>
+        <path d="M38 106 Q38 88 56 88 H144 Q162 88 162 106 V112 Q156 124 148 112 Q140 100 132 116 Q124 128 116 112 Q108 100 100 118 Q92 130 84 112 Q76 100 68 116 Q60 126 52 112 Q46 102 38 114 Z" fill="#A63D55"/>
+        <rect x="95" y="56" width="10" height="32" rx="3" fill="#fff" stroke="#3A2A24" stroke-width="1.2"/>
+        <path d="M100 36 Q110 48 100 56 Q90 48 100 36 Z" fill="#F2A541"/>
+        <circle cx="62" cy="152" r="3" fill="#fff"/><circle cx="84" cy="158" r="3" fill="#fff"/><circle cx="118" cy="154" r="3" fill="#fff"/><circle cx="140" cy="158" r="3" fill="#fff"/>
+        <circle cx="70" cy="86" r="7" fill="#C23B4E"/><circle cx="130" cy="86" r="7" fill="#C23B4E"/>
+      </svg>
+      <div class="float f1"><small>يبدأ من</small><strong>3.500 ر.ع</strong></div>
+      <div class="float f2">الأكثر طلبًا: الفراولة</div>
+    </div>
+  </div>
+</section>
+
+<section id="menu" class="white">
+  <div class="wrap">
+    <div class="head">
+      <div><h2>المنيو</h2><p>اختر، أضف للسلة، وأرسل طلبك على واتساب.</p></div>
+      <a href="https://www.instagram.com/minicake.meem" target="_blank" rel="noopener">تصاميم أكثر في الانستقرام</a>
+    </div>
+    <div class="tabs" id="tabs" role="group" aria-label="تصفية المنيو"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section id="occasions">
+  <div class="wrap">
+    <h2>لكل مناسبة كيكتها</h2>
+    <div class="occ">
+      <div class="d"><strong>أعياد الميلاد</strong><span>اسم، رقم، ولون يناسب الحفلة.</span></div>
+      <div style="background:var(--blush)"><strong>التخرج</strong><span>احتفل بالإنجاز بكيكة على قده.</span></div>
+      <div style="background:var(--sand)"><strong>المواليد</strong><span>ترحيب لطيف بالضيف الجديد.</span></div>
+      <div style="background:#fff;border:1px solid var(--line)"><strong>هدايا</strong><span>رسالة قصيرة على كيكة صغيرة.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="white">
+  <div class="wrap">
+    <h2>طريقة الطلب</h2>
+    <div class="steps">
+      <div><strong>اختر التصميم</strong><span>من المنيو أو أرسل صورة للفكرة اللي في بالك.</span></div>
+      <div><strong>أرسل الطلب على واتساب</strong><span>السلة ترسل طلبك جاهزًا — حدد النكهة والكتابة وتاريخ الاستلام. يفضّل الطلب قبل يومين.</span></div>
+      <div><strong>استلم وافرح</strong><span>استلام من الخوض أو توصيل لجميع مناطق مسقط.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <h2>قالوا عنّا</h2>
+    <div class="reviews">
+      <figure><div class="stars" aria-label="5 نجوم">★★★★★</div><blockquote>الكيكة كانت أحلى من الصورة، والطعم خفيف ومو ثقيل. بنتي انبسطت فيها.</blockquote><figcaption>أم سارة، عيد ميلاد</figcaption></figure>
+      <figure><div class="stars" aria-label="5 نجوم">★★★★★</div><blockquote>طلبت بوكس التخرج لأخوي، التغليف مرتب والتوصيل على الوقت.</blockquote><figcaption>محمد، تخرج</figcaption></figure>
+      <figure><div class="stars" aria-label="5 نجوم">★★★★★</div><blockquote>بينتو اللوتس صار طلبي الثابت كل أسبوع.</blockquote><figcaption>نورة</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="head"><h2>من أعمالنا</h2><a href="https://www.instagram.com/minicake.meem" target="_blank" rel="noopener">@minicake.meem</a></div>
+    <div class="gallery" id="gallery"></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fr">
+      <div><div class="big">جاهز تطلب؟</div><p>أرسل لنا فكرتك ونرد عليك خلال ساعة.</p></div>
+      <a class="btn" style="background:var(--bg);color:var(--ink)" href="https://wa.me/96891234567" target="_blank" rel="noopener">واتساب: 9123 4567</a>
+    </div>
+    <div class="meta fr">
+      <span>الموقع: الخوض، مسقط</span>
+      <span>أوقات الطلب: السبت – الخميس، 9 ص – 9 م</span>
+      <a href="https://www.instagram.com/minicake.meem" target="_blank" rel="noopener">انستقرام @minicake.meem</a>
+    </div>
+    <p style="font-size:13px;margin-top:20px;color:#B8A59B">© <span id="yr"></span> ميني كيك ميم</p>
+  </div>
+</footer>
+
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+  <div class="shade" data-close></div>
+  <div class="panel">
+    <button class="x" data-close aria-label="إغلاق السلة">×</button>
+    <h3 id="cartTitle">سلتك</h3>
+    <div class="lines" id="lines"></div>
+    <div class="sum"><span>المجموع</span><span id="total">0.000 ر.ع</span></div>
+    <a class="btn btn-accent" id="send" target="_blank" rel="noopener">أرسل الطلب على واتساب</a>
+  </div>
+</div>
+
+<script>
+const WA = '96891234567';
+const products = [
+  {id:'p1',cat:'ميني كيك',name:'ميني كيك الفراولة',desc:'لـ 2–3 أشخاص، كريمة وفراولة طازجة',price:3.5,base:'#F7D6D9',top:'#E88A9A',dot:'#C23B4E',tag:'الأكثر طلبًا'},
+  {id:'p2',cat:'ميني كيك',name:'ميني كيك لوتس',desc:'لـ 2–3 أشخاص، صوص لوتس وكراميل',price:3.8,base:'#EBD3B5',top:'#B5793F',dot:'#6B4226'},
+  {id:'p3',cat:'بينتو كيك',name:'بينتو "سنة حلوة"',desc:'لشخص أو شخصين، مع كتابة الاسم',price:4.5,base:'#FFF4E6',top:'#F5B7C5',dot:'#A63D55',tag:'جديد'},
+  {id:'p4',cat:'بينتو كيك',name:'بينتو شوكولاتة',desc:'لشخص أو شخصين، شوكولاتة بلجيكية',price:4.5,base:'#D8B89C',top:'#5A3A2E',dot:'#F2C94C'},
+  {id:'p5',cat:'كب كيك',name:'كب كيك فانيلا',desc:'بوكس 6 حبات، ألوان حسب الطلب',price:5.0,base:'#FCE8D2',top:'#C9A0DC',dot:'#6B5B95'},
+  {id:'p6',cat:'كب كيك',name:'كب كيك بيستاشيو',desc:'بوكس 6 حبات، كريمة الفستق',price:5.5,base:'#EAF0DA',top:'#9BB36B',dot:'#4F7A6A'},
+  {id:'p7',cat:'بوكسات',name:'بوكس المواليد',desc:'ميني كيك + 6 كب كيك، أزرق أو وردي',price:9.9,base:'#DCE9F5',top:'#8FB5DA',dot:'#3E6A96'},
+  {id:'p8',cat:'بوكسات',name:'بوكس التخرج',desc:'بينتو + 6 كب كيك، قبعة التخرج',price:12.0,base:'#F4EBDD',top:'#3A2A24',dot:'#F2C94C',tag:'هدية مميزة'}
+];
+const cats = ['الكل','ميني كيك','بينتو كيك','كب كيك','بوكسات'];
+let cat = 'الكل';
+const cart = {};
+const omr = n => n.toFixed(3) + ' ر.ع';
+const cake = (b,t,d,plate=true) => `<svg viewBox="0 0 200 200" aria-hidden="true">${plate?'<ellipse cx="100" cy="172" rx="80" ry="11" fill="#EADBD0"/>':''}<rect x="42" y="94" width="116" height="76" rx="14" fill="${b}"/><path d="M42 108 Q42 90 60 90 H140 Q158 90 158 108 V114 Q152 124 146 114 Q138 102 130 118 Q122 128 114 114 Q106 102 98 118 Q90 128 82 114 Q74 102 66 118 Q58 126 52 114 Q46 104 42 116 Z" fill="${t}"/><circle cx="100" cy="84" r="8" fill="${d}"/><circle cx="66" cy="150" r="3" fill="${d}"/><circle cx="100" cy="156" r="3" fill="${d}"/><circle cx="134" cy="150" r="3" fill="${d}"/></svg>`;
+
+function renderTabs(){
+  document.getElementById('tabs').innerHTML = cats.map(c=>`<button class="tab" aria-pressed="${c===cat}" data-cat="${c}">${c}</button>`).join('');
+}
+function renderGrid(){
+  document.getElementById('grid').innerHTML = products.filter(p=>cat==='الكل'||p.cat===cat).map(p=>{
+    const q = cart[p.id]||0;
+    return `<article class="card"><div class="pic">${cake(p.base,p.top,p.dot)}${p.tag?`<span class="tag">${p.tag}</span>`:''}</div>
+      <h3>${p.name}</h3><p>${p.desc}</p>
+      <div class="row"><span class="price">${omr(p.price)}</span>
+      <button class="add ${q?'in':''}" data-add="${p.id}">${q?'في السلة × '+q:'أضف للسلة'}</button></div></article>`;
+  }).join('');
+}
+function renderCart(){
+  const ids = Object.keys(cart).filter(id=>cart[id]>0);
+  let n=0,t=0; ids.forEach(id=>{const p=products.find(x=>x.id===id);n+=cart[id];t+=cart[id]*p.price;});
+  document.getElementById('count').textContent = n;
+  document.getElementById('total').textContent = omr(t);
+  document.getElementById('lines').innerHTML = ids.length ? ids.map(id=>{const p=products.find(x=>x.id===id);return `<div class="line"><div><strong>${p.name}</strong><div style="color:var(--muted);font-size:14px">${omr(p.price*cart[id])}</div></div><div class="qty"><button data-dec="${id}" aria-label="إنقاص">−</button><span>${cart[id]}</span><button data-add="${id}" aria-label="زيادة">+</button></div></div>`}).join('') : '<p class="empty">السلة فاضية — اختر كيكتك من المنيو.</p>';
+  const msg = 'مرحبا ميني كيك ميم، حاب أطلب:\n' + ids.map(id=>{const p=products.find(x=>x.id===id);return `- ${p.name} × ${cart[id]}`}).join('\n') + `\nالمجموع: ${omr(t)}`;
+  const send = document.getElementById('send');
+  send.href = 'https://wa.me/'+WA+'?text='+encodeURIComponent(msg);
+  send.style.pointerEvents = ids.length?'auto':'none'; send.style.opacity = ids.length?1:.5;
+}
+document.addEventListener('click', e=>{
+  const t = e.target.closest('[data-cat],[data-add],[data-dec],[data-close],#openCart');
+  if(!t) return;
+  if(t.dataset.cat){cat=t.dataset.cat;renderTabs();renderGrid();}
+  else if(t.dataset.add){cart[t.dataset.add]=(cart[t.dataset.add]||0)+1;renderGrid();renderCart();}
+  else if(t.dataset.dec){cart[t.dataset.dec]=Math.max(0,(cart[t.dataset.dec]||0)-1);renderGrid();renderCart();}
+  else if(t.id==='openCart'){document.getElementById('drawer').classList.add('open');}
+  else if(t.hasAttribute('data-close')){document.getElementById('drawer').classList.remove('open');}
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('drawer').classList.remove('open');});
+document.getElementById('gallery').innerHTML = [['#F6E7E0','#F7D6D9','#E88A9A'],['#EFE6D8','#D8B89C','#5A3A2E'],['#EAF0DA','#FFFFFF','#9BB36B'],['#DCE9F5','#FFFFFF','#8FB5DA'],['#F3E2DC','#FFF4E6','#C9A0DC'],['#EFE6D8','#EBD3B5','#B5793F']].map(([bg,b,t])=>`<div style="background:${bg}">${cake(b,t,'#C23B4E',false)}</div>`).join('');
+document.getElementById('yr').textContent = new Date().getFullYear();
+renderTabs();renderGrid();renderCart();
+</script>
+</body>
+</html>
